@@ -5,6 +5,8 @@ in concurrent purchasing. It has two versions of the same buy endpoint
 running side by side: a naive one that oversells stock under load, and
 a fixed one using Redis atomic operations that doesn't.
 
+Stack: Node.js, Express, PostgreSQL, Redis, JWT auth, React (Vite), k6 for load testing.
+
 ## The problem
 
 Under concurrent load, "read stock, check it's above zero, decrement it"
